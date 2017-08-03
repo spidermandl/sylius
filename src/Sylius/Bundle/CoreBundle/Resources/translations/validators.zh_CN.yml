@@ -1,0 +1,37 @@
+# This file is part of the Sylius package.
+# (c) Paweł Jędrzejewski
+
+sylius:
+    channel:
+        base_currency:
+            not_blank: 请输入销售渠道的基础货币。
+        default_locale:
+            not_blank: 请输入销售渠道默认区域设置。
+        contact_email:
+            invalid: 电子邮件无效。
+            max: 电子邮件必须不能超过 {{ limit }} 个字符。
+            min: 电子邮件至少{{limit}}个字符
+    checkout:
+        shipping_method:
+            not_blank: 请选择配送方式。
+    contact:
+        email:
+            invalid: 电子邮件无效。
+            not_blank: 请输入您的电子邮件。
+    locale:
+        code:
+            not_blank: 请输入区域设置代码。
+            unique: 此区域设置已存在。
+    product_variant:
+        onHand:
+            min: 库存量必须大于 {{limit}}。
+            not_blank: 请输入库存量
+        original_price:
+            min: 原价不能为负。
+    product_translation:
+        short_description:
+            max: 简短描述不能超过 {{ limit }} 个字符。
+    user:
+        email:
+            unique: 该电子邮件已被使用
+            invalid: 电子邮件无效。

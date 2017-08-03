@@ -1,0 +1,14 @@
+官方文档 http://docs.sylius.org/en/latest/book/installation/vagrant_installation.html
+
+安装概要：
+安装composer(PHP 用来管理依赖（dependency）关系的工具)，对PHP版本有要求，php升级到7.1
+$ php bin/console sylius:install 
+	出现 Some system requirements are not fulfilled(timezone)错误？
+		php -i | grep php.ini 获取php.ini路径，修改php.ini 中 date.timezone 时区设置
+	出现 Symfony\Component\Debug\Exception\OutOfMemoryException？
+		php -i | grep php.ini 获取php.ini路径，修改php.ini 中 memory_limit= '256M'
+
+$ yarn install (Yarn 跟 Npm 一样都是 JavaScript 套件版本管理工具)
+$ yarn run gulp
+$ php bin/console server:start
+$ open http://localhost:8000/
